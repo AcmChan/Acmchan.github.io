@@ -1,0 +1,43 @@
+.body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a:link, a:visited, a:hover, a:active{
+	color:white;
+	text-decoration: none;
+}
+
+button {
+
+    background: transparent;
+    border: none !important;
+    font-size:0;
+}
+
+.reddit, .twitch, .youtube {
+  border-style: solid;
+  border-width: 50%;
+  border-color: white;
+  width: 75%;
+  margin:20px 0 0 50px;
+  padding: 10px 0 10px 20px;
+}
+
+.reddit {
+  background-color: #ff4501;  
+}
+
+
+.twitch {
+	background-color: #6441a3;
+}
+
+.youtube {
+	background-color: #e0192a;
+}
