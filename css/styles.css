@@ -1,11 +1,11 @@
-.body {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-ul {
-	list-style-type: none;
+body {
+	background-color: #111;
+  color: white;
+  font-family: 'Share', cursive;
+  font-size: 2em;
+  margin-top: 150px;
+  user-select: none;
+  text-transform: capitalize;
 }
 
 a:link, a:visited, a:hover, a:active{
@@ -13,31 +13,126 @@ a:link, a:visited, a:hover, a:active{
 	text-decoration: none;
 }
 
-button {
+* {
+  --text-color: white;
+  --text-color-one: #a81c66;
+  --text-color-two: #b82152;
+  --text-color-three: #de3f52;
+  --text-color-four: #ee5b48;
+  --text-color-five: #ff9657;
+}
 
+button {
     background: transparent;
     border: none !important;
     font-size:0;
 }
 
-.reddit, .twitch, .youtube {
-  border-style: solid;
-  border-width: 50%;
-  border-color: white;
-  width: 75%;
-  margin:20px 0 0 50px;
-  padding: 10px 0 10px 20px;
+.search{
+  width: 1050px;
+  margin-left: auto;
+  margin-right: auto; 
+
 }
 
-.reddit {
-  background-color: #ff4501;  
+input {
+  border: 0; 
+  font-size: 1em;
+  outline: none;
+  background-color: var(--background);
+  color: transparent;
+  width: 1050px; 
+  text-align: center;
+  border-bottom: 4px solid;
+  border-bottom-color: white;
+  margin-top: 200px;
+  text-shadow: 0 0 0 #ffffff;
+  font-family: 'Share', cursive;
+}
+
+.links{
+  width: 900px ;
+  margin-left: auto ;
+  margin-right: auto ;
+}
+li {
+  list-style-type: none;
+}
+
+li:first-child{
+  text-align: center;
+}
+
+ul {
+  float: left;
+}
+
+ul:nth-child(1) > li, ul:nth-child(1) > li > a {
+  color: var(--text-color-one);
+}
+
+ul:nth-child(2) > li, ul:nth-child(2) > li > a {
+  color: var(--text-color-two);
+}
+
+ul:nth-child(3) > li, ul:nth-child(3) > li > a {
+  color: var(--text-color-three);
+}
+
+ul:nth-child(4) > li, ul:nth-child(4) > li > a {
+  color: var(--text-color-four);
+}
+
+ul:nth-child(5) > li, ul:nth-child(5) > li > a {
+  color: var(--text-color-five);
 }
 
 
-.twitch {
-	background-color: #6441a3;
+
+
+li:nth-child(1) {
+  border-bottom: 2px solid;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  transition: border-bottom 5000ms;
+  transition: margin-bottom 5000ms;
 }
 
-.youtube {
-	background-color: #e0192a;
+ul > li:not(:first-child), ul > li:not(:first-child) > a {
+  color: var(--text-color);
+  letter-spacing: normal;
+   -webkit-transition: color 3000ms;
 }
+
+/*hovering the list*/
+ul:hover li:nth-child(1){
+  border-bottom: 4px solid;
+  padding-bottom: 8px;
+  font-weight: bold;
+}
+
+ul:nth-child(1) > li:not(:first-child):hover, ul:nth-child(1) > li:not(:first-child) > a:hover {
+  color: var(--text-color-one);
+   -webkit-transition: color 100ms;
+}
+
+ul:nth-child(2) > li:not(:first-child):hover, ul:nth-child(2) > li:not(:first-child) > a:hover {
+  color: var(--text-color-two);
+  -webkit-transition: color 100ms;
+}
+
+ul:nth-child(3) > li:not(:first-child):hover, ul:nth-child(3) > li:not(:first-child) > a:hover {
+  color: var(--text-color-three);
+  -webkit-transition: color 100ms;
+}
+
+ul:nth-child(4) > li:not(:first-child):hover, ul:nth-child(4) > li:not(:first-child) > a:hover {
+  color: var(--text-color-four);
+  -webkit-transition: color 100ms;
+}
+
+ul:nth-child(5) > li:not(:first-child):hover, ul:nth-child(5) > li:not(:first-child) > a:hover {
+  color: var(--text-color-five);
+  -webkit-transition: color 100ms;
+}
+
