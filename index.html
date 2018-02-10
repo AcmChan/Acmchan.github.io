@@ -4,69 +4,75 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>New Page&lrm;</title>
+	<title>Home&lrm;</title>
 
 	<link rel="stylesheet" href="css/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Share|Source+Sans+Pro" rel="stylesheet">
 </head>
 
 
 <body>
-	<div class="body">
-		<div class="reddit">
-			<h1><a class="test" href="http://reddit.com">Reddit</a></h1>
-			<p><ul>
-				<li><a href="http://reddit.com/r/hearthstone">r/hearthstone</a></li>
-				<li><a href="http://reddit.com/r/competitiveHS">r/competitiveHS</a></li>
-				<li><a href="http://reddit.com/r/overwatch">r/overwatch</a></li>
-				<li><a href="http://reddit.com/r/competitiveoverwatch">r/competitiveOW</a></li>
-				<li><a href="http://reddit.com/r/fortnitebr">r/fortnite</a></li>
-				<li><a href="http://reddit.com/r/megalinks">r/megalinks</a></li>
-				<li> 
-					r/<input type="text" id="gtSubreddit" onkeypress="
-						if (event.keyCode == 13)
-							document.getElementById('gtSubredditBtn').click()" />
-				    <button id="gtSubredditBtn">Go</button>
+	<div class="links">
+		<ul class="reddit-list">
+			<li class="reddit-header"><a href="http://reddit.com">reddit</a></li>
+			<li><a href="http://reddit.com/r/competitiveHS">comp</a>|<a href="http://reddit.com/r/hearthstone">HS</a></li>
+			<li><a href="http://reddit.com/r/competitiveoverwatch">comp</a>|<a href="http://reddit.com/r/overwatch">OW</a></li>
+			<li><a href="http://reddit.com/r/pubattlegrounds">PUBG</a></li>
+			<li><a href="http://reddit.com/r/fortnitebr">fortnite</a></li>
+		</ul>
+		<ul class="media-list">
+			<li class="media-header">media</li>			
+			<li><a href="http://twitch.tv/following">twitch</a></li>
+			<li><a href="http://youtube.com/feed/subscriptions">youtube</a></li>
+			<li><a href="http://127.0.0.1:32400/web/index.html">plex</a></li>
+			<li><a href="http://kissanime.ru/">kissAnime</a></li>
+		</ul>
+		<ul class="torrents-list">
+			<li class="torrents-header">torrents</li>
+			<li><a href="https://thepiratebay.org">pirateBay</a></li>
+			<li><a href="https://rarbg.to">rarbg</a></li>
+			<li><a href="https://eztv.ag">eztv</a></li>
+		</ul>
 
-				    <script type="text/javascript">
-				        document.getElementById("gtSubredditBtn").addEventListener("click", function(){
-				            var url = document.getElementById("gtSubreddit").value;
 
-				            window.location.href = "http://www.reddit.com/r/"+url;
 
-				        });
-				    </script>
-				</li>
-			</ul></p>
-		</div>
-		<div class="twitch">
-			<h1><a href="http://www.twitch.tv">Twitch</a></h1>
-			<ul>
-				<li><a href="http://twitch.tv/following">tv/following</a></li>
-				<li><a href="http://twitch.tv/directory">tv/browse</a></li>
-			</ul>
-		</div>
-		<div class="youtube">
-			<h1><a href="http://www.youtube.com/">Youtube</a></h1>
-			<ul>
-				<li><a href="http://youtube.com/feed/subscriptions">subscriptions</a></li>
-				<li><a href="http://youtube.com/feed/trending">trending</a></li>
-				<li> 
-					search: <input type="text" id="searchYoutube" onkeypress="
-						if (event.keyCode == 13)
-							document.getElementById('searchYoutubeBtn').click()" />
-				    <button id="searchYoutubeBtn">Go</button>
+		<ul class="code-list">
+			<li class="code-header">code</li>
+			<li><a href="http://github.com">gitHub</a></li>
+			<li><a href="http://devdocs.io">devDocs</a></li>
+			<li><a href="http://codepen.io">codePen</a></li>
+		</ul>
 
-				    <script type="text/javascript">
-				        document.getElementById("searchYoutubeBtn").addEventListener("click", function(){
-				            var url = document.getElementById("searchYoutube").value;
 
-				            window.location.href = "http://www.youtube.com/results?search_query="+url;
 
-				        });
-				    </script>
-				</li>
-			</ul>
-		</div>
+		<ul class="comms-list">
+			<li class="comms-header">comms</li>
+			<li><a href="https://gmail.com">gmail</a></li>
+			<li><a href="https://discordapp.com/channels/@me">discord</a></li>
+			<li><a href="https://web.whatsapp.com">whatsApp</a></li>
+		</ul>
 	</div>
+
+	<div class="search">
+		<input type="text" placeholder="search..." id="superBar" autofocus onkeypress="
+			if (event.keyCode == 13)
+				document.getElementById('superBarBtn').click()" />
+		<button id="superBarBtn">Go</button>
+		<script type="text/javascript">
+		    document.getElementById("superBarBtn").addEventListener("click", function(){
+		        var url = document.getElementById("superBar").value;
+
+		        if (url.substring(0,2) == "r/"){
+		        	window.location.href = "http://www.reddit.com/"+url;
+		        } else if (/([a-z0-9]+[.]{1}[a-z]+)$/.test(url)){
+		        	window.location.href = "http://www."+url;
+		        } else {
+		        	window.location.href = "http://www.google.com/search?q="+url;
+		    	}
+
+		    });
+		</script>
+    </div>
+
 </body>
 </html>
