@@ -57,11 +57,3 @@ setInterval(colorChange, 1);
 function rgb(r, g, b){
   return "rgb("+r+","+g+","+b+")";
 }
-
-function randBg() {
-  var num = Math.ceil( Math.random() * 3);
-  document.body.background = 'url(img/'+num+'.jpg)';
-  document.body.style.backgroundRepeat = "repeat";// Background repeat
-}
-
-randBg();
