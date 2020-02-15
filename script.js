@@ -1,7 +1,6 @@
 function inc(offset){
   var t = new Date();
-  // return (Math.cos(t.getTime()/(1000)+(offset*Math.PI/180)))
-  return ((t.getTime()/(10)) % 360 + offset*30)/360;
+  return ((t.getTime()/(1000)) % 360 + offset*30)/360;
 }
 
 function hslToRgb(h, s, l){
