@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'Product Sans1';
+  src: url('fonts/Product Sans Regular.ttf')  format('truetype'); 
+}
+@font-face {
+  font-family: 'Product Sans2';
+  src: url('fonts/Product Sans Bold.ttf')  format('truetype'); 
+}
+
+
+body {
+	font-family: 'Product Sans1', sans-serif;
+	background: linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0, 0, 0, 0.5)
+        ),
+		url('img/1.jpg');
+	background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center top;
+    background-attachment: fixed;
+	background-color: #111;
+	color: white;
+	font-size: 2em;
+	text-transform: capitalize;
+}
+
+:root {
+	--text-color-one: rgb(0, 153, 255);
+	--text-color-two: rgb(0, 153, 255);
+	--text-color-thr: rgb(0, 153, 255);
+	--text-color-fou: rgb(0, 153, 255);
+	--text-color-fiv: rgb(0, 153, 255);
+	--text-color-six: rgb(0, 153, 255);
+}
+
+.links{
+  width: 1150px ;
+  margin-left: 330px ;
+	margin-right: auto ;
+	margin-top: 170px;
+}
+
+ul {
+	float: left;
+	list-style-type: none;
+}
+
+li:nth-child(1) {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+li:nth-child(n+1) {
+	text-align: left;
+	color: var(--text-color);
+}
+
+.gradient {
+	border-bottom: 2px solid;
+	padding-left: 15px;
+	padding-right: 15px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+/*hovering the list*/
+ul:hover .gradient{
+  border-bottom: 4px solid;
+  padding-bottom: 3px;
+  font-weight: bold;
+}
+
+.search{
+	padding-top: 400px;
+}
+
+a, a:hover, a:focus, a:active, a:visited {
+	text-decoration: none;
+	color: #fff;
+}
+
+input {
+	border:none;
+	border-bottom: 2px solid #fff;
+	min-width: 850px;
+	padding-bottom: 10px;
+	background-color: transparent;
+	color: #fff;
+	outline: 0;
+	margin-bottom: 20px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #fff;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #fff;
+}
+
+ul:nth-child(1) > li:not(:first-child):hover, ul:nth-child(1) > li:not(:first-child) > a:hover {
+  color: var(--text-color-one);
+}
+
+ul:nth-child(2) > li:not(:first-child):hover, ul:nth-child(2) > li:not(:first-child) > a:hover {
+  color: var(--text-color-two);
+}
+
+ul:nth-child(3) > li:not(:first-child):hover, ul:nth-child(3) > li:not(:first-child) > a:hover {
+  color: var(--text-color-thr);
+}
+
+ul:nth-child(4) > li:not(:first-child):hover, ul:nth-child(4) > li:not(:first-child) > a:hover {
+  color: var(--text-color-fou);
+}
+
+ul:nth-child(5) > li:not(:first-child):hover, ul:nth-child(5) > li:not(:first-child) > a:hover {
+  color: var(--text-color-fiv);
+}
+
+ul:nth-child(6) > li:not(:first-child):hover, ul:nth-child(6) > li:not(:first-child) > a:hover {
+  color: var(--text-color-six);
+}
