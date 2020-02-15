@@ -7,6 +7,9 @@
   src: url('fonts/Product Sans Bold.ttf')  format('truetype'); 
 }
 
+.search{
+	padding-top: 550px;
+}
 
 body {
 	font-family: 'Product Sans1', sans-serif;
@@ -16,9 +19,9 @@ body {
         ),
 		url('img/1.jpg');
 	background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center top;
-    background-attachment: fixed;
+	background-size: cover;
+	background-position: center top;
+	background-attachment: fixed;
 	background-color: #111;
 	color: white;
 	font-size: 2em;
@@ -35,10 +38,12 @@ body {
 }
 
 .links{
-  width: 1150px ;
-  margin-left: 380px ;
-	margin-right: auto ;
+	width: 1150px ;
+	/* margin-bottom: 300px; */
 	margin-top: 170px;
+	position:absolute;
+	left: 50%;
+	transform: translate(-50%);
 }
 
 ul {
@@ -71,9 +76,7 @@ ul:hover .gradient{
   font-weight: bold;
 }
 
-.search{
-	padding-top: 400px;
-}
+
 
 a, a:hover, a:focus, a:active, a:visited {
 	text-decoration: none;
@@ -127,3 +130,5 @@ ul:nth-child(5) > li:not(:first-child):hover, ul:nth-child(5) > li:not(:first-ch
 ul:nth-child(6) > li:not(:first-child):hover, ul:nth-child(6) > li:not(:first-child) > a:hover {
   color: var(--text-color-six);
 }
+
+
